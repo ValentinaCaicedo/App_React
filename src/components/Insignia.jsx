@@ -1,0 +1,31 @@
+import React from 'react';
+import './styles/Insignia.css'
+import Logo from '../imagenes/customLogo.png'
+
+
+class Insignia extends React.Component {
+    render() {
+        // const firstName= 'Valentina';
+        // const lastName= ' Caicedo Rivero'
+        // const ocupacion= 'Estudiante'
+        // const usuarioGit= 'ValentinaCaicedo'
+        return (
+            <div className='Insignia'>
+                <div className='Insignia_header'>
+                    <img src={Logo} alt='Logo' />
+                </div>
+                <div className='Insignia__section_name'>
+                    <img className='Insignia__avatar' src={this.props.URLAvatar} alt='Foto de perfil' />
+                    <h1>{this.props.firstName}<br /> {this.props.lastName}</h1>
+                </div>
+                <div className='Insignia__section_info'>
+                    <h3>{this.props.ocupacion} </h3>
+                    <div>{this.props.usuarioGit}</div>
+                </div>
+                <div className='Insignia__footer'>
+                    Derechos Reservados
+                            </div>
+            </div>)
+    }
+}
+export default Insignia;
